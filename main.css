@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%
+}
+body {
+  font-family: verdana, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.contract {
+  display: grid;
+  grid-template-columns: 100%;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.spaceLeftRight {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.heading_1 {
+  padding: 1rem;
+  text-align: center;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  width: 100%;
+  display: block;
+}
+.heading_2 {
+  padding: 1rem;
+  text-align: left;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  width: 100%;
+}
+
+.heading_3 {
+  padding: 1rem;
+  text-align: left;
+  border: none;
+  font-size: 1.8rem;
+  color: black;
+  width: 100%;
+}
+
+.labelInput {
+  text-align: center;
+  width: auto;
+  display: inline;
+}
+.inputWrapper {
+display: block;
+position: relative;
+}
+.u-underline {
+  text-decoration: underline;
+}
+.u-bold {
+  font-weight: bold;
+}
+.u-margin-top-small {
+margin-top: 2rem;
+}
+.u-padding-top-small {
+padding-top: 2rem;
+}
+
+
+.paragraph_1 {
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0,.5);
+  font-family: verdana, sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.paragraph_2 {
+  padding: 1rem;
+  font-family: verdana, sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  border: none;
+  width: 100%;
+}
+.tooltipText {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  color: #fff;
+  font-size: 1.4rem;
+  opacity: 0;
+  text-align: center;
+  border-radius: 6px;
+  padding: .3rem 1rem;
+}
+.tooltipText2 {
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  background-color: black;
+  color: #fff;
+  font-size: 1.4rem;
+  opacity: 0;
+  text-align: center;
+  border-radius: 6px;
+  padding: .3rem 1rem;
+  transform: translateX(-50%);
+}
+.tooltipSmallText {
+font-size: 1rem;
+}
+.tooltipText::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltipText2::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltip:hover + .tooltipText {
+  animation: tooltipAnimLeft 1.2s forwards;
+}
+.tooltip:hover + .tooltipText2 {
+  animation: tooltipAnimTop 1s forwards;
+}
+@keyframes tooltipAnimLeft {
+from {
+opacity: 0;
+transform: translateX(-3rem);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes tooltipAnimTop {
+from {
+opacity: 0;
+transform: translateX(-50%) translateY(-2rem);
+}
+to {
+opacity: 1;
+transform: translateX(-50%) translateY(0);
+}
+}
+
+
+/* Add and Remove an Item from the document styling */
+
+
+.addRemoveForm {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.newElOptions {
+  color: white;
+  background-color: black;
+  padding: .9rem 2rem;
+  border: 1px solid white;
+  border-radius: .5rem;
+  font-size: 1rem;
+
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  font-size: 1rem;
+  transition: all .2s;
+  cursor: pointer;
+}
+.btn-green:hover {
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.5);
+  transform: translateY(-.3rem);
+  color: rgb(175, 246, 154);
+  background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(175, 246, 154);
+}
+.btn-red:hover {
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.5);
+  transform: translateY(-.3rem);
+  color: rgb(251, 109, 109);
+  background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(251, 109, 109);
+}
+.btn:active {
+  transform: translateY(-.1rem);
+}
+.newElNum {
+  color: rgb(73, 222, 3);
+  background-color: black;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 0;
+  border-radius: .5rem;
+}
+.delElNum {
+  color: rgb(222, 3, 3);
+}
+.newElLabel {
+  color: white;
+  background-color: black;
+  border-radius: .5rem;
+  padding: 1rem 0 1rem 1rem;
+  border: 1px solid white;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.nav_button {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  border-radius: 50%;
+  z-index: 99;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.15);
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,.15);
+}
+.nav_icon {
+  position: relative;
+  margin-top: 3rem;
+}
+.nav_icon, .nav_icon::after, .nav_icon::before {
+  display: inline-block;
+  background-color: #333;
+  width: 3rem;
+  height: .2rem;
+  transition: all .2s;
+}
+.nav_icon::before, .nav_icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav_icon::before {
+  top: -.8rem;
+}
+.nav_icon::after {
+  top: .8rem;
+}
+.nav_button:hover .nav_icon {
+  background-color: rgb(46, 141, 209);
+}
+.nav_button:hover .nav_icon::before {
+  background-color: rgb(46, 141, 209);
+  top: -1rem;
+}
+.nav_button:hover .nav_icon::after {
+  background-color: rgb(46, 141, 209);
+  top: 1rem;
+}
+.nav_checkbox {
+display: none;
+}
+.menu_open {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  background-color: rgba(60, 60, 60, .9);
+
+}
+.nav_checkbox:checked ~ .menu_open{
+  opacity: 1;
+  width: 100%;
+}
+
+
+.nav_checkbox:checked + .nav_button .nav_icon {
+background-color: transparent;
+}
+.nav_checkbox:checked + .nav_button .nav_icon::before {
+top: 0;
+transform: rotate(-135deg);
+}
+.nav_checkbox:checked + .nav_button .nav_icon::after {
+top: 0;
+transform: rotate(135deg);
+}
+.menu_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.msg {
+  font-size: 2rem;
+  color: white;
+}
